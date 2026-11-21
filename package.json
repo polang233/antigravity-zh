@@ -1,6 +1,6 @@
 {
   "name": "magpie-antigravity-cn-localization",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "在 Magpie 中查看 Antigravity 版本、应用社区汉化或还原官方版",
   "main": "plugin.mjs",
@@ -28,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/polang233/magpie-antigravity-cn-localization.git"
+    "url": "https://github.com/polang233/antigravity-desktop-zh.git"
   }
 }

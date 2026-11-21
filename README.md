@@ -6,7 +6,7 @@
 
 ## 安装与使用
 
-1. 从[最新发布](https://github.com/polang233/magpie-antigravity-cn-localization/releases/latest)下载插件 ZIP，解压到准备长期保留的位置。
+1. 从[最新发布](https://github.com/polang233/antigravity-desktop-zh/releases/latest)下载 `antigravity-desktop-zh` 插件 ZIP，解压到准备长期保留的位置。
 2. 在喜鹊的「插件 → 从文件夹添加」中选择解压后含 `package.json` 的文件夹，启用插件。也可以直接选择本仓库的克隆目录。
 3. 从侧栏打开「Antigravity 汉化」，点「下载最新版」。确认汉化包与客户端版本匹配后，正常退出 Antigravity，点「应用汉化」。下次从原入口启动即可。
 
