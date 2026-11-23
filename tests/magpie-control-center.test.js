@@ -99,6 +99,8 @@ test('Magpie shows the real ASAR versions and downloads the latest release witho
   });
 
   const page = await (await fetch(origin + '/')).text();
+  assert.ok(page.includes('<h1>' + manifest.magpie.page.title + '</h1>'));
+  assert.ok(page.includes('插件版本 v' + manifest.version));
   const [, token] = /name="localizer-token" content="([a-f0-9]{48})"/.exec(page);
   assert.match(page, new RegExp('name="magpie-service-port" content="' + manifest.magpie.page.service.port + '"'));
   const headers = { Origin: 'null', 'X-Localizer-Token': token };

@@ -14,7 +14,8 @@ const { createPackageInstaller } = require('./package-installer');
 const { isAppRunningStrict } = require('./process-check');
 const { httpError, safeEqualToken, verifySameOriginAndToken } = require('./src/http-security');
 const { loadSessionToken, sessionFingerprint } = require('./session-state');
-const { service } = require('./package.json').magpie.page;
+const { version, magpie } = require('./package.json');
+const { service } = magpie.page;
 
 const folderNames = ['cache', 'install', 'config', 'agent'];
 const assets = new Map([
@@ -143,7 +144,12 @@ function createControlCenter({
         "frame-ancestors 'self' http://wails.localhost https://wails.localhost wails://wails.localhost wails://localhost",
       ].join('; ');
       res.writeHead(200, { 'Content-Type': type, 'Content-Security-Policy': csp });
-      return res.end(file === 'index.html' ? source.toString('utf8').replace('__LOCALIZER_TOKEN__', token) : source);
+      if (file === 'index.html') {
+        return res.end(source.toString('utf8')
+          .replace('__LOCALIZER_TOKEN__', token)
+          .replace('<!-- plugin-version -->', '插件版本 v' + version));
+      }
+      return res.end(source);
     }
 
     const allowed = apiMethods.get(req.url);
