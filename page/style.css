@@ -95,7 +95,7 @@ dialog::backdrop { background: rgb(0 0 0 / .5); }
 @media (max-width: 720px) {
   .workspace { grid-template-columns: minmax(0, 1fr); gap: 19px; }
   .identity { display: flex; align-items: center; gap: 14px; padding: 0; }
-  .identity img { width: 60px; height: 60px; }
+  .identity img { width: 72px; height: 72px; }
   h1 { font-size: 22px; margin: 0; }
   .tabs { margin-bottom: 22px; }
 }

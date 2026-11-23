@@ -242,7 +242,7 @@ async function startControlCenter({ port, appDir } = {}, profileDirectory) {
       }
       if (!safeEqualToken(response.headers.get('x-localizer-session'), fingerprint)) throw error;
       setTimeout(() => {
-        void bind().catch(failure => console.warn('Antigravity 汉化服务无法接管端口：' + failure.message));
+        void bind().catch(failure => console.warn('antigravity-zh服务无法接管端口：' + failure.message));
       }, 350).unref();
     }
   }
